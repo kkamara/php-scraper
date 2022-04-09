@@ -17,8 +17,7 @@ make dev && make backend-migrate
 ## Usage
 
 ```bash
-alias sail='vendor/bin/sail'
-sail dusk --filter scrape
+php artisan browser:scrape
 ```
 
 ## Browser Testing

@@ -1,25 +1,50 @@
 <?php
 
-namespace Tests\Browser\Scrape;
+namespace App\Console\Commands;
 
-use Laravel\Dusk\Browser;
-use Tests\DuskTestCase;
+use Illuminate\Console\Command;
+use App\Browser;
 use Facebook\WebDriver\WebDriverBy;
 
-class AmazonScrapeTest extends DuskTestCase
+class BrowserScrape extends Command
 {
-    /**     *
-     * @return void
+    /**
+     * The name and signature of the console command.
+     *
+     * @var string
      */
-    public function testPullSamsungPhones()
+    protected $signature = 'browser:scrape';
+
+    /**
+     * The console command description.
+     *
+     * @var string
+     */
+    protected $description = 'Command description';
+
+    private Browser $browser;
+
+    public function __construct(Browser $browser)
     {
-        $this->browse(function (Browser $browser) {
+        parent::__construct();
+        $this->browser = $browser;
+    }
+
+    /**
+     * Execute the console command.
+     *
+     * @return int
+     */
+    public function handle()
+    {
+        echo 'in browser scrape'.PHP_EOL;
+        $this->browser->browse(function (\Laravel\Dusk\Browser $browser) {
             $browser->visit('https://www.amazon.co.uk/');
 
             $el = $browser->driver->findElement(WebDriverBy::xpath('//input[contains(@id,"twotabsearchtextbox")]'));
             $el->sendKeys('Samsung phones')->submit();
 
-            $browser->screenshot('homepage');
+            $browser->screenshot('/home/kel/workspace/amazon-scraper/tests/Browser/screenshots/homepage2');
 
             $browser->driver->findElement(WebDriverBy::xpath('//span[text()="Samsung"]'))->click();
 
@@ -37,7 +62,7 @@ class AmazonScrapeTest extends DuskTestCase
 
             $msgs = [];
             for ($cnt = 0; $cnt < 51; $cnt++) {
-                $msgs[] = $cnt;
+                $msgs[] = '*';
             }
             echo implode('', $msgs).PHP_EOL;
 
@@ -54,6 +79,10 @@ class AmazonScrapeTest extends DuskTestCase
             $finalList = array_map([$this, 'combine'], $phones, $priceWholeNumbers, $priceDecimalNumbers);
             print_r($finalList);
         });
+
+        $this->browser->quit();
+
+        return 0;
     }
 
     private function combine($phone, $wholeNumber, $decimalNumber) {

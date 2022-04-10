@@ -14,6 +14,7 @@ Before you try to scrape any website, go through its robots.txt file. You can ac
 
 ```bash
 cp .env.example .env
+touch database/database.sqlite
 composer i
 make dev && make backend-migrate
 ```

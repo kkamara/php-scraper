@@ -1,4 +1,4 @@
-FROM php:8.1-fpm
+FROM php:8.0-fpm
 
 LABEL maintainer="Kelvin Kamara <https://github.com/kkamara>" \
       version="1.0"

@@ -19,6 +19,13 @@ composer i
 make dev && make backend-migrate
 ```
 
+## Using Docker?
+
+```bash
+docker build -t laravel-docker-aws .
+docker run -it -p 8001:80 laravel-docker-aws
+```
+
 ## Usage
 
 ```bash

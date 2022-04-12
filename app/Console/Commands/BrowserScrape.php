@@ -30,6 +30,12 @@ class BrowserScrape extends Command
         $this->browser = $browser;
     }
 
+    private function getInput() {
+        echo 'say smtn:'.PHP_EOL;
+        $words = $this->ask('>>');
+        $this->info($words);
+    }
+
     /**
      * Execute the console command.
      *

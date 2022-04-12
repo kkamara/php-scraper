@@ -20,7 +20,7 @@ class BrowserScrape extends Command
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'Navigates to amazon, searches for samsung phones and pulls the title and price data.';
 
     private Browser $browser;
 

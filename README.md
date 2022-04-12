@@ -42,10 +42,8 @@ php artisan browser:scrape
 
 ## Adding a new command
 
-Duplicate [app/Console/Commands/BrowserScrape.php](https://raw.githubusercontent.com/kkamara/amazon-scraper/develop/app/Console/Commands/BrowserScrape.php).
-
 ```bash
-cp app/Console/Commands/BrowserScrape.php app/Console/Commands/NewCrawler.php
+php artisan make:crawler crawler_test
 ```
 
 ## Browser Testing

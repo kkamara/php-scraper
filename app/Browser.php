@@ -88,22 +88,20 @@ class Browser
 
     protected function driver(): RemoteWebDriver
     {
-      $options = (new ChromeOptions)->addArguments(collect([
-          '--window-size=1920,1080',
-      ])->unless($this->hasHeadlessDisabled(), function ($items) {
-          return $items->merge([
-              '--disable-gpu',
-              '--headless',
-          ]);
-      })->all());
-
+        $options = (new ChromeOptions)->addArguments(collect([
+            '--window-size=1920,1080',
+            '--disable-blink-features=AutomationControlled',
+        ])->unless(
+            $this->hasHeadlessDisabled(), 
+            fn ($items) => $items->merge(['--disable-gpu', '--headless',]),
+        )->all());
       
-      return RemoteWebDriver::create(
-          $this->getServerURL(),
-          DesiredCapabilities::chrome()->setCapability(
-              ChromeOptions::CAPABILITY, $options
-          )
-      );
+        return RemoteWebDriver::create(
+            $this->getServerURL(),
+            DesiredCapabilities::chrome()->setCapability(
+                ChromeOptions::CAPABILITY, $options
+            )
+        );
     }
 
     /**

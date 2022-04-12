@@ -22,6 +22,9 @@ class NewCrawler2022 extends Command
      */
     protected $description = 'Command description';
 
+    /**
+     * @var Browser
+     */
     private Browser $browser;
 
     public function __construct(Browser $browser)
@@ -30,6 +33,9 @@ class NewCrawler2022 extends Command
         $this->browser = $browser;
     }
 
+    /**
+     * @return void
+     */
     private function getInput() {
         echo 'say smtn:'.PHP_EOL;
         $words = $this->ask('>>');

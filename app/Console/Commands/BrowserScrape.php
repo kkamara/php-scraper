@@ -22,6 +22,9 @@ class BrowserScrape extends Command
      */
     protected $description = 'Navigates to amazon, searches for samsung phones and pulls the title and price data.';
 
+    /**
+     * @var Browser
+     */
     private Browser $browser;
 
     public function __construct(Browser $browser)
@@ -30,6 +33,9 @@ class BrowserScrape extends Command
         $this->browser = $browser;
     }
 
+    /**
+     * @return void
+     */
     private function getInput() {
         echo 'say smtn:'.PHP_EOL;
         $words = $this->ask('>>');

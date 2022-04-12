@@ -1,8 +1,9 @@
 {
-    "name": "kkamara/laravel-react-boilerplate",
+    "name": "kkamara/amazon-scraper",
+    "version": "1.0.0",
     "type": "project",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "description": "Navigates to amazon, searches for samsung phones and pulls the title and price data.",
+    "keywords": ["laravel", "selenium", "web-scraping"],
     "license": "BSD",
     "require": {
         "php": "^8.0.2",

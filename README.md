@@ -2,11 +2,35 @@
 
 Navigates to amazon, searches for samsung phones and pulls the title and price data.
 
-## Important note: 
+* [Important note:](#note)
+
+* [Proven in a production environment](#proven)
+
+* [Requirements](#requirements)
+
+* [Installation](#installation)
+
+* [Using Docker?](#using-docker)
+
+* [Usage](#usage)
+
+* [Adding a new command](#adding-commands)
+
+* [Browser Testing](#testing)
+
+* [Mail Server](#mail)
+
+* [Misc](#misc)
+
+* [Contributing](#contributing)
+
+* [License](#license)
+
+## Important note: <a name="note"></a>
 
 Before you try to scrape any website, go through its robots.txt file. You can access it via `domainname/robots.txt`. There, you will see a list of pages allowed and disallowed for scraping. You should not violate any terms of service of any website you scrape.
 
-## Proven in a production environment
+## Proven in a production environment <a name="proven"></a>
 
 [Getting up and running on amazon ec2.](https://raw.githubusercontent.com/kkamara/amazon-scraper/develop/scripts/setup-project.sh)
 
@@ -23,7 +47,7 @@ composer i
 make dev && make backend-migrate
 ```
 
-## Using Docker?
+## Using Docker? <a name="using-docker"></a>
 
 ```bash
 docker build -t laravel-docker-aws .
@@ -40,20 +64,20 @@ php artisan browser:scrape
 
 [BrowserScrape command code.](https://raw.githubusercontent.com/kkamara/amazon-scraper/develop/app/Console/Commands/BrowserScrape.php)
 
-## Adding a new command
+## Adding a new command <a name="adding-commands"></a>
 
 ```bash
 php artisan make:crawler crawler_test
 ```
 
-## Browser Testing
+## Browser Testing <a name="testing"></a>
 
 ```bash
   alias sail='vendor/bin/sail'
   sail dusk
 ```
 
-## Mail Server
+## Mail Server <a name="mail"></a>
 
 ![docker-mailhog3.png](https://raw.githubusercontent.com/kkamara/useful/main/docker-mailhog3.png)
 

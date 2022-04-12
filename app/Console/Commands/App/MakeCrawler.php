@@ -5,7 +5,6 @@ namespace App\Console\Commands\App;
 use Exception;
 use Illuminate\Console\Command;
 use Illuminate\Support\Str;
-use Illuminate\Support\Facades\Artisan;
 
 class MakeCrawler extends Command
 {

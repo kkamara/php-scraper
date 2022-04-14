@@ -37,7 +37,6 @@ class NewCrawler2022 extends Command
      * @return void
      */
     private function getInput() {
-        echo 'say smtn:'.PHP_EOL;
         $words = $this->ask('>>');
         $this->info($words);
     }

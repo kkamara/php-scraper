@@ -37,7 +37,6 @@ class BrowserScrape extends Command
      * @return void
      */
     private function getInput() {
-        echo 'say smtn:'.PHP_EOL;
         $words = $this->ask('>>');
         $this->info($words);
     }
@@ -49,14 +48,13 @@ class BrowserScrape extends Command
      */
     public function handle()
     {
-        echo 'in browser scrape'.PHP_EOL;
         $this->browser->browse(function (\Laravel\Dusk\Browser $browser) {
             $browser->visit('https://www.amazon.co.uk/');
 
             $el = $browser->driver->findElement(WebDriverBy::xpath('//input[contains(@id,"twotabsearchtextbox")]'));
             $el->sendKeys('Samsung phones')->submit();
 
-            $browser->screenshot('/home/kel/workspace/amazon-scraper/tests/Browser/screenshots/homepage2');
+            $browser->screenshot(storage_path('/app/amazon'));
 
             $browser->driver->findElement(WebDriverBy::xpath('//span[text()="Samsung"]'))->click();
 

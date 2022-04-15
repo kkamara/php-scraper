@@ -60,7 +60,7 @@ docker run -it -p 8001:80 laravel-docker-aws
 php artisan browser:scrape
 ```
 
-[Browser class code.](https://raw.githubusercontent.com/kkamara/amazon-scraper/develop/app/Browser.php)
+[Browser class code.](https://raw.githubusercontent.com/kkamara/amazon-scraper/develop/app/Http/Browser.php)
 
 [BrowserScrape command code.](https://raw.githubusercontent.com/kkamara/amazon-scraper/develop/app/Console/Commands/BrowserScrape.php)
 

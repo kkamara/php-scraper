@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Http;
 
 use Closure;
 use Exception;
@@ -8,9 +8,7 @@ use Facebook\WebDriver\Chrome\ChromeOptions;
 use Facebook\WebDriver\Remote\DesiredCapabilities;
 use Facebook\WebDriver\Remote\RemoteWebDriver;
 use Laravel\Dusk\Chrome\ChromeProcess;
-use Laravel\Dusk\Chrome\SupportsChrome;
 use Symfony\Component\Process\Process;
-use Throwable;
 use Laravel\Dusk\Browser as DuskBrowser;
 
 class Browser

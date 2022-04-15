@@ -4,7 +4,7 @@ namespace App\Console\Commands;
 
 use Facebook\WebDriver\WebDriverBy;
 use Illuminate\Console\Command;
-use App\Browser;
+use App\Http\Browser;
 
 class NewCrawler2022 extends Command
 {

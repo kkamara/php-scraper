@@ -3,7 +3,7 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
-use App\Browser;
+use App\Http\Browser;
 use Facebook\WebDriver\WebDriverBy;
 
 class BrowserScrape extends Command

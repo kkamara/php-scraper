@@ -54,7 +54,7 @@ class BrowserScrape extends Command
             $el = $browser->driver->findElement(WebDriverBy::xpath('//input[contains(@id,"twotabsearchtextbox")]'));
             $el->sendKeys('Samsung phones')->submit();
 
-            $browser->screenshot(storage_path('/app/amazon'));
+            $browser->screenshot(storage_path('/app/debug'));
 
             $browser->driver->findElement(WebDriverBy::xpath('//span[text()="Samsung"]'))->click();
 

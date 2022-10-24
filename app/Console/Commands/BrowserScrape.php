@@ -3,8 +3,8 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
-use App\Http\Browser;
-use Facebook\WebDriver\WebDriverBy;
+use Goutte\Client;
+use Symfony\Component\Panther\Client as PantherClient;
 
 class BrowserScrape extends Command
 {
@@ -20,17 +20,22 @@ class BrowserScrape extends Command
      *
      * @var string
      */
-    protected $description = 'Navigates to amazon, searches for samsung phones and pulls the title and price data.';
+    protected $description = 'Apply for jobs programmatically with one-click ability.';
 
     /**
-     * @var Browser
+     * @var Client
      */
-    private Browser $browser;
+    private Client $client;
 
-    public function __construct(Browser $browser)
+    /**
+     * @var string
+     */
+    private string $url = 'https://www.imdb.com/search/name/?birth_monthday=12-10';
+
+    public function __construct(Client $client)
     {
         parent::__construct();
-        $this->browser = $browser;
+        $this->client = new Client;
     }
 
     /**
@@ -48,56 +53,69 @@ class BrowserScrape extends Command
      */
     public function handle()
     {
-        $this->browser->browse(function (\Laravel\Dusk\Browser $browser) {
-            $browser->visit('https://www.amazon.co.uk/');
+        $client = $this->client;
+        $crawler = $client->request('GET', 'https://www.imdb.com/search/name/?birth_monthday=12-10');
+        $links = $crawler->evaluate('//div[@class="lister-list"][1]//h3/a');
 
-            $el = $browser->driver->findElement(WebDriverBy::xpath('//input[contains(@id,"twotabsearchtextbox")]'));
-            $el->sendKeys('Samsung phones')->submit();
+        foreach ($links as $link) {
+            $this->info($link->textContent.PHP_EOL);
+        }
 
-            $browser->screenshot(storage_path('/app/debug'));
+        $crawler = $client->request('GET', 'https://www.imdb.com/search/name/?birth_monthday=12-10');
 
-            $browser->driver->findElement(WebDriverBy::xpath('//span[text()="Samsung"]'))->click();
-
-            $phoneNamesEl = $browser->driver->findElements(WebDriverBy::xpath('//span[contains(@class, "a-size-base-plus a-color-base a-text-normal")]'));
-            $priceWholeNumberEl = $browser->driver->findElements(WebDriverBy::xpath('//span[contains(@class, "a-price-whole")]'));
-            $priceDecimalNumberEl = $browser->driver->findElements(WebDriverBy::xpath('//span[contains(@class, "a-price-fraction")]'));
-
-            $phones = [];
-            $priceWholeNumbers = [];
-            $priceDecimalNumbers = [];
-
-            foreach($phoneNamesEl as $phone) {
-                $phones[] = $phone->getText();
-            }
-
-            $msgs = [];
-            for ($cnt = 0; $cnt < 51; $cnt++) {
-                $msgs[] = '*';
-            }
-            echo implode('', $msgs).PHP_EOL;
-
-            foreach($priceWholeNumberEl as $price) {
-                $priceWholeNumbers[] = $price->getText();
-            }
-            
-            echo implode('', $msgs).PHP_EOL;
-
-            foreach($priceDecimalNumberEl as $price) {
-                $priceDecimalNumbers[] = $price->getText();
-            }
-
-            $finalList = array_map([$this, 'combine'], $phones, $priceWholeNumbers, $priceDecimalNumbers);
-            print_r($finalList);
+        $crawler->filter('div.lister-list h3 > a')->each(function ($node) {
+            echo $node->text().PHP_EOL;
         });
+        /*
+        $client
+          ->request('GET', 'https://www.imdb.com/search/name/?birth_monthday=12-10')
+          ->filter('div.lister-list h3 a')
+          ->each(function ($node) use ($client) {
+              $name = $node->text();
 
-        $this->browser->quit();
+              $birthday = $client
+                  ->click($node->link())
+                  ->filter('#name-born-info > time')->first()
+                  ->attr('datetime');
+
+              $year = (new \DateTimeImmutable($birthday))->format('Y');
+
+              echo "{$name} was born in {$year}\n";
+          });
+          */
+        /*
+        while (true)
+        {
+            $crawler = $client->request('GET', $this->url);
+
+            $crawler
+                ->filter('div.lister-list h3 a')
+                ->each(function ($node) use ($client) {
+                    $name = $node->text();
+
+                    $birthday = $client
+                        ->click($node->link())
+                        ->filter('#name-born-info > time')->first()
+                        ->attr('datetime');
+
+                    $year = (new \DateTimeImmutable($birthday))->format('Y');
+
+                    echo "{$name} was born in {$year}\n";
+                });
+
+            // Try to find the "Next" link
+            $next = $crawler->filter('a.next-page');
+
+            // Stop, if there is no more "Next" link
+            if ($next->count() == 0) break;
+
+            $this->url = $next->link()->getUri();
+        }
+        */
+        (PantherClient::createChromeClient())
+          ->get('https://www.imdb.com/search/name/?birth_monthday=12-10')
+          ->takeScreenshot($saveAs = 'screenshot.jpg');
 
         return 0;
-    }
-
-    private function combine($phone, $wholeNumber, $decimalNumber) {
-        return array_merge([
-            'price' => $wholeNumber.'.'.$decimalNumber,
-        ],compact('phone'));
     }
 }

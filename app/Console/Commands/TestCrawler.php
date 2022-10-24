@@ -6,14 +6,14 @@ use Illuminate\Console\Command;
 use Goutte\Client;
 use Symfony\Component\Panther\Client as PantherClient;
 
-class NewCrawler2022 extends Command
+class TestCrawler extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'command:name';
+    protected $signature = 'browser:test';
 
     /**
      * The console command description.

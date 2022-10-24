@@ -22,3 +22,4 @@ tests/.DS_Store
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
 tmp/
+drivers/

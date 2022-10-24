@@ -8,24 +8,27 @@
     "require": {
         "php": "^8.0.2",
         "doctrine/dbal": "^3.1",
+        "fabpot/goutte": "^4.0",
         "fakerphp/faker": "^1.16",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^9.0",
         "laravel/tinker": "^2.5",
+        "masterminds/html5": "^2.7",
         "mbezhanov/faker-provider-collection": "^2.0",
         "php-webdriver/webdriver": "^1.12",
         "predis/predis": "^1.1",
         "symfony/http-client": "^6.0",
-        "symfony/mailgun-mailer": "^6.0"
+        "symfony/mailgun-mailer": "^6.0",
+        "symfony/panther": "^2.0"
     },
     "require-dev": {
-        "spatie/laravel-ignition": "^1.0",
-        "laravel/dusk": "^6.15",
         "laravel/sail": "^1.0.1",
+        "dbrekelmans/bdi": "^1.0",
         "mockery/mockery": "^1.4.2",
         "nunomaduro/collision": "^6.1",
-        "phpunit/phpunit": "^9.3.3"
+        "phpunit/phpunit": "^9.3.3",
+        "spatie/laravel-ignition": "^1.0"
     },
     "autoload": {
         "psr-4": {

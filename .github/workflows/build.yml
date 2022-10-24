@@ -59,12 +59,6 @@ jobs:
         run: php artisan migrate --seed --force
       - name: Change Directory Permissions
         run: chmod -R 777 storage bootstrap/cache
-      - name: Upgrade Chrome Driver
-        run: php artisan dusk:chrome-driver `/opt/google/chrome/chrome --version | cut -d " " -f3 | cut -d "." -f1`
-      - name: Change Dusk Bin Permissions
-        run: chmod -R 0755 vendor/laravel/dusk/bin/
-      - name: Start Chrome Driver
-        run: ./vendor/laravel/dusk/bin/chromedriver-linux &
       - name: Run Laravel Server
         run: php artisan serve --no-reload &
       - name: curl to localhost

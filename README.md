@@ -1,6 +1,6 @@
-# Amazon Scraper
+# PhP Scraper
 
-Navigates to amazon, searches for samsung phones and pulls the title and price data.
+Use php technologies to crawl and click buttons on websites.
 
 * [Important note:](#note)
 
@@ -54,8 +54,23 @@ We're able to cover 20, 000 sites / night / machine.
 cp .env.example .env
 touch database/database.sqlite
 composer i
-make dev && make backend-migrate
+# install chromedriver for Panther
+vendor/bin/bdi detect drivers
+# (optional)
+# make dev && make backend-migrate
 ```
+
+## Usage
+
+```bash
+php artisan browser:scrape
+
+php artisan browser:test
+```
+
+[Browser class code.](https://raw.githubusercontent.com/kkamara/amazon-scraper/develop/app/Http/Browser.php)
+
+[BrowserScrape command code.](https://raw.githubusercontent.com/kkamara/amazon-scraper/develop/app/Console/Commands/BrowserScrape.php)
 
 ## Using Docker? <a name="using-docker"></a>
 
@@ -64,27 +79,10 @@ docker build -t laravel-docker-aws .
 docker run -it -p 8001:80 laravel-docker-aws
 ```
 
-## Usage
-
-```bash
-php artisan browser:scrape
-```
-
-[Browser class code.](https://raw.githubusercontent.com/kkamara/amazon-scraper/develop/app/Http/Browser.php)
-
-[BrowserScrape command code.](https://raw.githubusercontent.com/kkamara/amazon-scraper/develop/app/Console/Commands/BrowserScrape.php)
-
 ## Adding a new command <a name="adding-commands"></a>
 
 ```bash
 php artisan make:crawler crawler_test
-```
-
-## Browser Testing <a name="testing"></a>
-
-```bash
-  alias sail='vendor/bin/sail'
-  sail dusk
 ```
 
 ## Mail Server <a name="mail"></a>

@@ -112,9 +112,11 @@ class BrowserScrape extends Command
             $this->url = $next->link()->getUri();
         }
         */
+        /*
         (PantherClient::createChromeClient())
           ->get('https://www.imdb.com/search/name/?birth_monthday=12-10')
           ->takeScreenshot($saveAs = 'screenshot.jpg');
+        */
 
         return 0;
     }

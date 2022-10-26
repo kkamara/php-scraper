@@ -68,9 +68,7 @@ php artisan browser:scrape
 php artisan browser:test
 ```
 
-[Browser class code.](https://raw.githubusercontent.com/kkamara/amazon-scraper/develop/app/Http/Browser.php)
-
-[BrowserScrape command code.](https://raw.githubusercontent.com/kkamara/amazon-scraper/develop/app/Console/Commands/BrowserScrape.php)
+[BrowserScrape command code.](https://raw.githubusercontent.com/kkamara/php-scraper/develop/app/Console/Commands/BrowserScrape.php)
 
 ## Using Docker? <a name="using-docker"></a>
 

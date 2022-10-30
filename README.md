@@ -63,7 +63,10 @@ vendor/bin/bdi detect drivers
 ## Usage
 
 ```bash
-php artisan browser:scrape
+PANTHER_NO_HEADLESS=true PANTHER_DEVTOOLS='' php artisan browser:scrape
+
+export PANTHER_NO_HEADLESS=true 
+export PANTHER_DEVTOOLS='' # enabled
 
 php artisan browser:test
 ```

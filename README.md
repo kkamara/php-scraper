@@ -1,6 +1,6 @@
 # PhP Scraper
 
-Use php technologies to crawl and click buttons on websites.
+Use php technologies to crawl and click buttons on websites with gui.
 
 * [Important note:](#note)
 

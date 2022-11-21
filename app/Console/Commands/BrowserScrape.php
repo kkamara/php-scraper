@@ -53,6 +53,10 @@ class BrowserScrape extends Command
      */
     public function handle()
     {
+        (PantherClient::createChromeClient())
+          ->get('https://www.imdb.com/search/name/?birth_monthday=12-10')
+          ->takeScreenshot($saveAs = 'screenshot.jpg');
+
         $client = $this->client;
         $crawler = $client->request('GET', 'https://www.imdb.com/search/name/?birth_monthday=12-10');
         $links = $crawler->evaluate('//div[@class="lister-list"][1]//h3/a');
@@ -66,6 +70,7 @@ class BrowserScrape extends Command
         $crawler->filter('div.lister-list h3 > a')->each(function ($node) {
             echo $node->text().PHP_EOL;
         });
+
         /*
         $client
           ->request('GET', 'https://www.imdb.com/search/name/?birth_monthday=12-10')
@@ -111,11 +116,6 @@ class BrowserScrape extends Command
 
             $this->url = $next->link()->getUri();
         }
-        */
-        /*
-        (PantherClient::createChromeClient())
-          ->get('https://www.imdb.com/search/name/?birth_monthday=12-10')
-          ->takeScreenshot($saveAs = 'screenshot.jpg');
         */
 
         return 0;

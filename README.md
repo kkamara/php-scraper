@@ -72,6 +72,8 @@ php artisan browser:scrape
 php artisan browser:test
 ```
 
+[BrowserInvoker.php](https://raw.githubusercontent.com/kkamara/php-scraper/develop/app/Console/Commands/BrowserInvoker.php)
+
 ## Using Docker? <a name="using-docker"></a>
 
 ```bash

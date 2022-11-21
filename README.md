@@ -62,6 +62,8 @@ vendor/bin/bdi detect drivers
 
 ## Usage
 
+Update the command at [./app/Console/Commands/BrowserScrape.php](https://raw.githubusercontent.com/kkamara/php-scraper/develop/app/Console/Commands/BrowserScrape.php)
+
 ```bash
 php artisan browser:scrape
 php artisan browser:test
@@ -70,8 +72,6 @@ php artisan browser:test
 export PANTHER_NO_HEADLESS=true # see gui when crawling with panther client
 export PANTHER_DEVTOOLS='' # enabled
 ```
-
-[BrowserScrape command code.](https://raw.githubusercontent.com/kkamara/php-scraper/develop/app/Console/Commands/BrowserScrape.php)
 
 ## Using Docker? <a name="using-docker"></a>
 

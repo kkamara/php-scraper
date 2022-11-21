@@ -48,6 +48,10 @@ class TestCrawler extends Command
      */
     public function handle()
     {
+        (PantherClient::createChromeClient())
+          ->get('https://www.imdb.com/search/name/?birth_monthday=12-10')
+          ->takeScreenshot($saveAs = 'screenshot.jpg');
+
         $client = $this->client;
         $crawler = $client->request('GET', 'https://www.imdb.com/search/name/?birth_monthday=12-10');
         $links = $crawler->evaluate('//div[@class="lister-list"][1]//h3/a');
@@ -55,10 +59,6 @@ class TestCrawler extends Command
         foreach ($links as $link) {
             $this->info($link->textContent.PHP_EOL);
         }
-
-        (PantherClient::createChromeClient())
-          ->get('https://www.imdb.com/search/name/?birth_monthday=12-10')
-          ->takeScreenshot($saveAs = 'screenshot.jpg');
 
         return 0;
     }

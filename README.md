@@ -60,6 +60,17 @@ vendor/bin/bdi detect drivers
 # make dev && make backend-migrate
 ```
 
+```bash
+# chromedriver_mac64
+# chromedriver_win32
+# See https://chromedriver.storage.googleapis.com
+# for drivers list.
+wget https://chromedriver.storage.googleapis.com/2.37/chromedriver_linux64.zip
+unzip chromedriver_linux64.zip
+sudo mv chromedriver /usr/bin/chromedriver
+chromedriver --version
+```
+
 ## Usage
 
 Update the command at [./app/Console/Commands/BrowserScrape.php](https://raw.githubusercontent.com/kkamara/php-scraper/develop/app/Console/Commands/BrowserScrape.php)

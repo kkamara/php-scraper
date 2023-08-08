@@ -13,8 +13,12 @@ sed -i "s/\/wd\/hub//g" .env
 sed -i "s/APP_ENV=local/APP_ENV=production/g"
 
 echo 'installing google chrome driver'
-mkdir
+mkdir tmp
 cd/tmp/
+# chromedriver_mac64
+# chromedriver_win32
+# See https://chromedriver.storage.googleapis.com
+# for drivers list.
 wget https://chromedriver.storage.googleapis.com/2.37/chromedriver_linux64.zip
 unzip chromedriver_linux64.zip
 sudo mv chromedriver /usr/bin/chromedriver

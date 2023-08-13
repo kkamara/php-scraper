@@ -2,8 +2,8 @@
 
 namespace App\Console\Commands;
 
-use Illuminate\Console\Command;
 use Goutte\Client;
+use Illuminate\Console\Command;
 use Symfony\Component\Panther\Client as PantherClient;
 
 class BrowserScrape extends Command
@@ -20,7 +20,7 @@ class BrowserScrape extends Command
      *
      * @var string
      */
-    protected $description = 'Apply for jobs programmatically with one-click ability.';
+    protected $description = 'Command description';
 
     /**
      * @var Client

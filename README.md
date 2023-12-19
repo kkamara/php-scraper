@@ -102,7 +102,7 @@ php artisan make:crawler crawler_test
 
 ![docker-mailhog3.png](https://raw.githubusercontent.com/kkamara/useful/main/docker-mailhog3.png)
 
-Mail environment credentials are at [.env](https://raw.githubusercontent.com/kkamara/laravel-react-boilerplate/develop/.env.example).
+Mail environment credentials are at [.env](https://raw.githubusercontent.com/kkamara/php-reactjs-boilerplate/main/.env.example).
 
 The [mailhog](https://github.com/mailhog/MailHog) docker image runs at `http://localhost:8025`.
 
@@ -112,7 +112,7 @@ The [mailhog](https://github.com/mailhog/MailHog) docker image runs at `http://l
 
 [See amazon scraper.](https://github.com/kkamara/amazon-scraper)
 
-[See php react boilerplate.](https://github.com/kkamara/laravel-react-boilerplate)
+[See php react boilerplate.](https://github.com/kkamara/php-reactjs-boilerplate)
 
 [Using Laravel dusk outside of tests.](https://stefanzweifel.io/posts/2021/09/26/using-laravel-dusk-outside-of-tests-to-upload-files)
 

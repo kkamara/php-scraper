@@ -112,7 +112,7 @@ The [mailhog](https://github.com/mailhog/MailHog) docker image runs at `http://l
 
 [See amazon scraper.](https://github.com/kkamara/amazon-scraper)
 
-[See php react boilerplate.](https://github.com/kkamara/php-reactjs-boilerplate)
+[See php reactjs boilerplate.](https://github.com/kkamara/php-reactjs-boilerplate)
 
 [Using Laravel dusk outside of tests.](https://stefanzweifel.io/posts/2021/09/26/using-laravel-dusk-outside-of-tests-to-upload-files)
 

@@ -1,9 +1,14 @@
 {
-    "name": "kkamara/amazon-scraper",
+    "name": "kkamara/php-scraper",
     "version": "1.0.0",
     "type": "project",
-    "description": "Navigates to amazon, searches for samsung phones and pulls the title and price data.",
-    "keywords": ["laravel", "selenium", "web-scraping"],
+    "description": "(2022) Use PHP technologies to crawl and click buttons on websites with GUI. I recommend working with Linux or MacOs.",
+    "keywords": [
+        "bot",
+        "crawler",
+        "laravel",
+        "spider"
+    ],
     "license": "BSD",
     "require": {
         "php": "^8.0.2",

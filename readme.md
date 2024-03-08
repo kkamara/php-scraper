@@ -1,6 +1,6 @@
 # PhP Scraper
 
-Use php technologies to crawl and click buttons on websites with gui.
+Use PHP technologies to crawl and click buttons on websites with GUI. I recommend working with Linux or MacOs.
 
 * [Important note:](#note)
 
@@ -59,6 +59,8 @@ vendor/bin/bdi detect drivers
 # (optional)
 # make dev && make backend-migrate
 ```
+
+[Installing web drivers](https://symfony.com/doc/current/testing/end_to_end.html#installing-web-drivers).
 
 ```bash
 # chromedriver_mac64

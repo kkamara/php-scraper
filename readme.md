@@ -58,6 +58,9 @@ composer i
 vendor/bin/bdi detect drivers
 # (optional)
 # make dev && make backend-migrate
+# (optional)
+# npm install
+# npm run dev
 ```
 
 [Installing web drivers](https://symfony.com/doc/current/testing/end_to_end.html#installing-web-drivers).

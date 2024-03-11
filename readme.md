@@ -63,6 +63,8 @@ vendor/bin/bdi detect drivers
 # npm run dev
 ```
 
+#### The following installation step may or may not be required.
+
 [Installing web drivers](https://symfony.com/doc/current/testing/end_to_end.html#installing-web-drivers).
 
 ```bash

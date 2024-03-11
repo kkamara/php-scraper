@@ -2,7 +2,7 @@
     "name": "kkamara/php-scraper",
     "version": "1.0.0",
     "type": "project",
-    "description": "(2022) Use PHP technologies to crawl and click buttons on websites with GUI. I recommend working with Linux or MacOs.",
+    "description": "(2022) Use PHP technologies to crawl and click buttons on websites with GUI. I highly recommend working with Linux (including virtual machines) or MacOs.",
     "keywords": [
         "bot",
         "crawler",

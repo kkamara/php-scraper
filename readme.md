@@ -1,6 +1,6 @@
 # PhP Scraper
 
-(2022) Use PHP technologies to crawl and click buttons on websites with GUI. I recommend working with Linux or MacOs.
+(2022) Use PHP technologies to crawl and click buttons on websites with GUI. I highly recommend working with Linux (including virtual machines) or MacOs.
 
 * [Important note:](#note)
 

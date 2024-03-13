@@ -82,11 +82,15 @@ chromedriver --version
 Update the command at [./app/Console/Commands/BrowserScrape.php](https://raw.githubusercontent.com/kkamara/php-scraper/develop/app/Console/Commands/BrowserScrape.php)
 
 ```bash
-export PANTHER_NO_HEADLESS=true # see gui when crawling with panther client
-export PANTHER_DEVTOOLS='' # enabled
-
 php artisan browser:scrape
 php artisan browser:test
+```
+
+#### When choosing to not explicitly define GUI configuration in the code, the following is an option to enable GUI by way of your environment
+
+```bash
+export PANTHER_NO_HEADLESS=true # see gui when crawling with panther client
+export PANTHER_DEVTOOLS='' # enabled
 ```
 
 [BrowserInvoker.php](https://raw.githubusercontent.com/kkamara/php-scraper/develop/app/Console/Commands/BrowserInvoker.php)

@@ -2,22 +2,25 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\SoftDeletes;
+// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Traits\Tappable;
+use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
 {
-    use HasFactory, Notifiable, SoftDeletes;
+    use HasFactory, Notifiable;
+    use Tappable;
+    use HasApiTokens;
 
     /**
      * The attributes that are mass assignable.
      *
-     * @property Array
+     * @var array<int, string>
      */
     protected $fillable = [
-        'slug',
         'first_name',
         'last_name',
         'email',
@@ -25,9 +28,9 @@ class User extends Authenticatable
     ];
 
     /**
-     * The attributes that should be hidden for arrays.
+     * The attributes that should be hidden for serialization.
      *
-     * @property Array
+     * @var array<int, string>
      */
     protected $hidden = [
         'password',
@@ -35,18 +38,15 @@ class User extends Authenticatable
     ];
 
     /**
-     * The attributes that should be cast to native types.
+     * Get the attributes that should be cast.
      *
-     * @property Array
+     * @return array<string, string>
      */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
-
-    /**
-     * The attributes that shouldn't be overwritten.
-     *
-     * @property Array
-     */
-    protected $guarded = [];
+    protected function casts(): array
+    {
+        return [
+            'email_verified_at' => 'datetime',
+            'password' => 'hashed',
+        ];
+    }
 }

@@ -3,8 +3,7 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
-use Goutte\Client;
-use Symfony\Component\Panther\Client as PantherClient;
+use Symfony\Component\Panther\Client;
 
 class TestCrawler extends Command
 {
@@ -13,7 +12,7 @@ class TestCrawler extends Command
      *
      * @var string
      */
-    protected $signature = 'browser:test';
+    protected $signature = 'custom:crawler';
 
     /**
      * The console command description.
@@ -23,14 +22,19 @@ class TestCrawler extends Command
     protected $description = 'Command description';
 
     /**
-     * @var Browser
+     * @var Client
      */
-    private Browser $browser;
+    protected Client $client;
 
-    public function __construct(Client $client)
+    public function __construct()
     {
         parent::__construct();
-        $this->client = new Client;
+        $this->client = Client::createChromeClient(null, [
+            '--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36',
+            '--window-size=1200,1100',
+            // '--headless',
+            // '--disable-gpu',
+        ]);
     }
 
     /**
@@ -48,17 +52,15 @@ class TestCrawler extends Command
      */
     public function handle()
     {
-        (PantherClient::createChromeClient())
-          ->get('https://www.imdb.com/search/name/?birth_monthday=12-10')
-          ->takeScreenshot($saveAs = 'screenshot.jpg');
+        $this->client
+            ->get('https://www.imdb.com/search/name/?birth_monthday=12-10');
+        $crawler = $this->client->getCrawler();
+        $preferences = $crawler->filterXPath('//button[@data-testid="accept-button"]');
+        $preferences->click();
+        $element = $crawler->filterXPath('//h3[text()="1. Kenneth Branagh"]');
+        $element->click();
+        $this->client->takeScreenshot($saveAs = 'screenshot.jpg');
 
-        $client = $this->client;
-        $crawler = $client->request('GET', 'https://www.imdb.com/search/name/?birth_monthday=12-10');
-        $links = $crawler->evaluate('//div[@class="lister-list"][1]//h3/a');
-
-        foreach ($links as $link) {
-            $this->info($link->textContent.PHP_EOL);
-        }
 
         return 0;
     }

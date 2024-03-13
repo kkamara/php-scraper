@@ -47,8 +47,9 @@ We're able to cover 20, 000 sites / night / machine.
 [Getting up and running on amazon ec2.](https://raw.githubusercontent.com/kkamara/amazon-scraper/develop/scripts/setup-project.sh)
 
 ## Requirements
-* [https://laravel.com/docs/9.x/installation](https://laravel.com/docs/9.x/installation)
-* [https://laravel.com/docs/9.x/mix#main-content](https://laravel.com/docs/9.x/mix#main-content)
+
+* [https://laravel.com/docs/11.x/installation](https://laravel.com/docs/11.x/installation)
+* [https://laravel.com/docs/11.x/vite#main-content](https://laravel.com/docs/11.x/vite#main-content)
 
 ## Installation
 

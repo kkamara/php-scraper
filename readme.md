@@ -12,15 +12,11 @@
 
 * [Installation](#installation)
 
-* [Using Docker?](#using-docker)
-
 * [Usage](#usage)
 
 * [Adding a new command](#adding-commands)
 
 * [Browser Testing](#testing)
-
-* [Mail Server](#mail)
 
 * [Misc](#misc)
 
@@ -95,40 +91,39 @@ php artisan browser:test
 
 [BrowserInvoker.php](https://raw.githubusercontent.com/kkamara/php-scraper/develop/app/Console/Commands/BrowserInvoker.php)
 
-## Using Docker? <a name="using-docker"></a>
-
-```bash
-docker build -t laravel-docker-aws .
-docker run -it -p 8001:80 laravel-docker-aws
-```
-
 ## Adding a new command <a name="adding-commands"></a>
 
 ```bash
 php artisan make:crawler crawler_test
 ```
 
-## Mail Server <a name="mail"></a>
-
-![docker-mailhog3.png](https://raw.githubusercontent.com/kkamara/useful/main/docker-mailhog3.png)
-
-Mail environment credentials are at [.env](https://raw.githubusercontent.com/kkamara/php-reactjs-boilerplate/main/.env.example).
-
-The [mailhog](https://github.com/mailhog/MailHog) docker image runs at `http://localhost:8025`.
-
 ## Misc
 
-[See python scraper.](https://github.com/kkamara/python-selenium)
+[See MRVL Desktop.](https://github.com/kkamara/mrvl-desktop)
 
-[See amazon scraper.](https://github.com/kkamara/amazon-scraper)
+[See MRVL Web.](https://github.com/kkamara/mrvl-web)
 
-[See php reactjs boilerplate.](https://github.com/kkamara/php-reactjs-boilerplate)
+[See Github to Bitbucket Backup Repo Updater.](https://github.com/kkamara/ghbbupdater)
 
-[Using Laravel dusk outside of tests.](https://stefanzweifel.io/posts/2021/09/26/using-laravel-dusk-outside-of-tests-to-upload-files)
+[See PHP Docker Skeleton.](https://github.com/kkamara/php-docker-skeleton)
 
-[Running ChromeDriver and Selenium in Python on an AWS EC2 Instance.](https://praneeth-kandula.medium.com/running-chromedriver-and-selenium-in-python-on-an-aws-ec2-instance-2fb4ad633bb5)
+[See Laravel 10 API 3.](https://github.com/kkamara/laravel-10-api-3)
 
-The `Makefile` for this project contains useful commands for a Laravel application and can be found at [laravel-makefile](https://github.com/kkamara/laravel-makefile).
+[See movies app.](https://github.com/kkamara/movies)
+
+[See food nutrition facts search web app.](https://github.com/kkamara/food-nutrition-facts-search-web-app)
+
+[See ecommerce web.](https://github.com/kkamara/ecommerce-web)
+
+[See city maps mobile.](https://github.com/kkamara/city-maps-mobile)
+
+[See ecommerce mobile.](https://github.com/kkamara/ecommerce-mobile)
+
+[See crm.](https://github.com/kkamara/crm)
+
+[See birthday currency.](https://github.com/kkamara/birthday-currency)
+
+[See PHP scraper.](https://github.com/kkamara/php-scraper)
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.

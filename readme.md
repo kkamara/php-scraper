@@ -1,6 +1,6 @@
 <img src="https://github.com/kkamara/useful/raw/main/php-scraper.gif" alt="php-scraper.gif" width=""/>
 
-# PhP Scraper
+# PhP Scraper [![API](https://github.com/kkamara/php-scraper/actions/workflows/build.yml/badge.svg)](https://github.com/kkamara/php-scraper/actions/workflows/build.yml)
 
 (2022) Use PHP technologies to crawl and click buttons on websites with GUI. I highly recommend working with Linux (including virtual machines) or MacOs.
 

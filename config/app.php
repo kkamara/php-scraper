@@ -15,6 +15,8 @@ return [
 
     'name' => env('APP_NAME', 'Laravel'),
 
+    'selenium_grid_port' => env('SELENIUM_GRID_PORT', 4444),
+
     /*
     |--------------------------------------------------------------------------
     | Application Environment

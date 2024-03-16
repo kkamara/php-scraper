@@ -45,6 +45,11 @@ cp .env.example .env
 composer install
 # install chromedriver for Panther client.
 vendor/bin/bdi detect drivers
+```
+
+#### Add ./drivers/ to your environment Path.
+
+```bash
 # Run composer install again.
 composer install
 php artisan key:generate
@@ -55,19 +60,14 @@ npm install
 npm run build
 ```
 
-#### The following installation step may or may not be required.
+#### Download Selenium Server jar file
 
-[Installing web drivers](https://symfony.com/doc/current/testing/end_to_end.html#installing-web-drivers).
+[Download Selenium Server jar file](https://www.selenium.dev/documentation/grid/getting_started/).
+
+Run the following in a new terminal.
 
 ```bash
-# chromedriver_mac64
-# chromedriver_win32
-# See https://chromedriver.storage.googleapis.com
-# for drivers list.
-wget https://chromedriver.storage.googleapis.com/2.37/chromedriver_linux64.zip
-unzip chromedriver_linux64.zip
-sudo mv chromedriver /usr/bin/chromedriver
-chromedriver --version
+java -jar selenium-server-4.18.1.jar standalone
 ```
 
 ## Usage
@@ -91,7 +91,7 @@ export PANTHER_DEVTOOLS='' # enabled
 ## Adding a new command <a name="adding-commands"></a>
 
 ```bash
-php artisan make:crawler crawler_test
+php artisan make:crawler TestCrawler
 ```
 
 ## Misc

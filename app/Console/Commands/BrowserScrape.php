@@ -24,17 +24,14 @@ class BrowserScrape extends Command
     /**
      * @var Client
      */
-    protected Client $client;
+    private Client $client;
 
     public function __construct()
     {
         parent::__construct();
-        $this->client = Client::createChromeClient(null, [
-            '--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36',
-            '--window-size=1200,1100',
-            // '--headless',
-            // '--disable-gpu',
-        ]);
+        $this->client = Client::createSeleniumClient(
+            'http://localhost:'.config('app.selenium_grid_port').'/wd/hub'
+        );
     }
 
     /**

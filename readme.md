@@ -93,6 +93,8 @@ php artisan make:crawler crawler_test
 
 ## Misc
 
+[See Python Selenium web scraper.](https://github.com/kkamara/python-selenium)
+
 [See MRVL Desktop.](https://github.com/kkamara/mrvl-desktop)
 
 [See MRVL Web.](https://github.com/kkamara/mrvl-web)
@@ -116,8 +118,6 @@ php artisan make:crawler crawler_test
 [See crm.](https://github.com/kkamara/crm)
 
 [See birthday currency.](https://github.com/kkamara/birthday-currency)
-
-[See PHP scraper.](https://github.com/kkamara/php-scraper)
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.

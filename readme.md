@@ -41,15 +41,18 @@ Before you try to scrape any website, go through its robots.txt file. You can ac
 
 ```bash
 cp .env.example .env
-touch database/database.sqlite
-composer i
-# install chromedriver for Panther
+# Don't worry when the following step errors related to chromedriver binary, we will install them right after.
+composer install
+# install chromedriver for Panther client.
 vendor/bin/bdi detect drivers
-# (optional)
-# make dev && make backend-migrate
-# (optional)
-# npm install
-# npm run dev
+# Run composer install again.
+composer install
+php artisan key:generate
+# Before running the next command:
+# Update your database details in .env
+php artisan migrate --seed
+npm install
+npm run build
 ```
 
 #### The following installation step may or may not be required.

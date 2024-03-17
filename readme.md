@@ -79,7 +79,7 @@ npm run build
 Run the following in a new terminal.
 
 ```bash
-java -jar selenium-server-4.18.1.jar standalone
+java -jar selenium-server-4.18.1.jar standalone --override-max-sessions true --max-sessions 10
 ```
 
 ## Usage

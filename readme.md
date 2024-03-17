@@ -93,12 +93,9 @@ php artisan browser:test
 
 [BrowserInvoker.php](https://raw.githubusercontent.com/kkamara/php-scraper/develop/app/Console/Commands/BrowserInvoker.php)
 
-#### When choosing to not explicitly define GUI configuration in the code, the following is an option to enable GUI by way of your environment
+#### Panther Environment Variables
 
-```bash
-export PANTHER_NO_HEADLESS=true # see gui when crawling with panther client
-export PANTHER_DEVTOOLS='' # enabled
-```
+[Panther Environment Variables](https://github.com/symfony/panther?tab=readme-ov-file#environment-variables).
 
 ## Adding a new command <a name="adding-commands"></a>
 

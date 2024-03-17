@@ -4,6 +4,7 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 use Symfony\Component\Panther\Client;
+use Facebook\WebDriver\Remote\DesiredCapabilities;
 
 class BrowserScrape extends Command
 {
@@ -29,8 +30,29 @@ class BrowserScrape extends Command
     public function __construct()
     {
         parent::__construct();
+        $capabilities = array( // See https://www.browserstack.com/docs/automate/capabilities
+            "os"                       => "Windows",
+            "os_version"               => "11",
+            "browser"                  => "Chrome",
+            "browser_version"          => "latest",
+            "name"                     => "Test",
+            "build"                    => "Build 1.0",
+            "browserstack.debug"       => true,
+            "browserstack.console"     => "info",
+            "browserstack.networkLogs" => true,
+            "disableCorsRestrictions"  => true,
+            "wsLocalSupport"           => true,
+            "geoLocation"              => "GB"
+        );
+        $caps = DesiredCapabilities::chrome();
+        foreach ($capabilities as $key => $value) {
+            $caps->setCapability($key, $value);
+        }
         $this->client = Client::createSeleniumClient(
-            'http://localhost:'.config('app.selenium_grid_port').'/wd/hub'
+            'http://localhost:'.config('app.selenium_grid_port').'/wd/hub',
+            $caps,
+            null,
+            [],
         );
     }
 

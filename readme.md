@@ -88,7 +88,6 @@ Update the command at [./app/Console/Commands/BrowserScrape.php](https://raw.git
 
 ```bash
 php artisan browser:scrape
-php artisan browser:test
 ```
 
 [BrowserInvoker.php](https://raw.githubusercontent.com/kkamara/php-scraper/develop/app/Console/Commands/BrowserInvoker.php)

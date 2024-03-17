@@ -81,6 +81,8 @@ Run the following in a new terminal.
 java -jar selenium-server-4.18.1.jar standalone --override-max-sessions true --max-sessions 10
 ```
 
+[CLI options in the Selenium Grid](https://www.selenium.dev/documentation/grid/configuration/cli_options/).
+
 ## Usage
 
 Update the command at [./app/Console/Commands/BrowserScrape.php](https://raw.githubusercontent.com/kkamara/php-scraper/develop/app/Console/Commands/BrowserScrape.php)

@@ -97,6 +97,10 @@ php artisan browser:test
 
 [Panther Environment Variables](https://github.com/symfony/panther?tab=readme-ov-file#environment-variables).
 
+#### Capabilities
+
+[Capabilities](https://www.browserstack.com/docs/automate/capabilities).
+
 ## Adding a new command <a name="adding-commands"></a>
 
 ```bash

@@ -6,8 +6,6 @@
 
 * [Important note:](#note)
 
-* [Proven in a production environment](#proven)
-
 * [Requirements](#requirements)
 
 * [Installation](#installation)
@@ -27,10 +25,6 @@
 ## Important note: <a name="note"></a>
 
 Before you try to scrape any website, go through its robots.txt file. You can access it via `domainname/robots.txt`. There, you will see a list of pages allowed and disallowed for scraping. You should not violate any terms of service of any website you scrape.
-
-## Proven in a production environment <a name="proven"></a>
-
-[Getting up and running on amazon ec2.](https://raw.githubusercontent.com/kkamara/amazon-scraper/develop/scripts/setup-project.sh)
 
 ## Requirements
 

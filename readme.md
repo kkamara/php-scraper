@@ -42,9 +42,12 @@ composer install
 
 #### Add chromedriver to Path
 
+Make sure Chromedriver is installed and added to your environment Path.
+
 ```bash
 # install chromedriver for Panther client.
 vendor/bin/bdi detect drivers
+sudo mv drivers/chromedriver /usr/local/bin/chromedriver
 # Or
 # chromedriver_mac64
 # chromedriver_win32
@@ -52,12 +55,13 @@ vendor/bin/bdi detect drivers
 # for drivers list.
 wget https://chromedriver.storage.googleapis.com/2.37/chromedriver_linux64.zip
 unzip chromedriver_linux64.zip
-sudo mv chromedriver /usr/bin/chromedriver
+sudo mv chromedriver /usr/local/bin/chromedriver
 chromedriver --version
 ```
 
+#### Continue installation
+
 ```bash
-# Run composer install again.
 composer install
 php artisan key:generate
 # Before running the next command:

@@ -30,6 +30,7 @@ Before you try to scrape any website, go through its robots.txt file. You can ac
 
 * [https://laravel.com/docs/11.x/installation](https://laravel.com/docs/11.x/installation)
 * [https://laravel.com/docs/11.x/vite#main-content](https://laravel.com/docs/11.x/vite#main-content)
+* [Java](https://www.java.com/en/)
 
 ## Installation
 

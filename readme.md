@@ -43,11 +43,23 @@ Before you try to scrape any website, go through its robots.txt file. You can ac
 cp .env.example .env
 # Don't worry when the following step errors related to chromedriver binary, we will install them right after.
 composer install
-# install chromedriver for Panther client.
-vendor/bin/bdi detect drivers
 ```
 
-#### Add ./drivers/ to your environment Path.
+#### Add chromedriver to Path
+
+```bash
+# install chromedriver for Panther client.
+vendor/bin/bdi detect drivers
+# Or
+# chromedriver_mac64
+# chromedriver_win32
+# See https://chromedriver.storage.googleapis.com
+# for drivers list.
+wget https://chromedriver.storage.googleapis.com/2.37/chromedriver_linux64.zip
+unzip chromedriver_linux64.zip
+sudo mv chromedriver /usr/bin/chromedriver
+chromedriver --version
+```
 
 ```bash
 # Run composer install again.

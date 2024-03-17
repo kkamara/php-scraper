@@ -100,6 +100,8 @@ php artisan browser:scrape
 
 [Capabilities](https://www.browserstack.com/docs/automate/capabilities).
 
+[Using Desired Capabilities](https://chromedriver.chromium.org/capabilities#h.p_ID_52).
+
 ## Adding a new command <a name="adding-commands"></a>
 
 ```bash

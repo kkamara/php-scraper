@@ -33,9 +33,7 @@ jobs:
       - name: Install Composer dependencies
         run: composer install -q --no-progress --prefer-dist --optimize-autoloader
       - name: Prepare environment
-        run: |
-          cp .env.example .env
-          sed -i "s/DB_PASSWORD=/DB_PASSWORD=secret/g" .env
+        run: cp .env.example .env
       - name: Clear config cache
         run: php artisan config:clear
       - name: Generate key

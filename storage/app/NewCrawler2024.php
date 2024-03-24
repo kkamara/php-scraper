@@ -70,11 +70,12 @@ class NewCrawler2024 extends Command
     }
 
     /**
-     * @return void
+     * @return string
      */
     private function getInput() {
         $words = $this->ask('>>');
         $this->info($words);
+        return $words;
     }
 
     /**

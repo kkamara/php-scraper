@@ -51,7 +51,7 @@ class BrowserScrape extends Command
                     '--start-maximized',
                     '--ignore-certificate-errors',
                     '--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36',
-                    '--window-size=1200,1100',
+                    '--window-size=1920,1080',
                     // '--headless',
                     // '--disable-gpu',
                 ],

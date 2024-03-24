@@ -90,7 +90,9 @@ class NewCrawler2024 extends Command
         $crawler = $this->client->getCrawler();
         $preferences = $crawler->filterXPath('//button[@data-testid="accept-button"]');
         $preferences->click();
-        $element = $crawler->filterXPath('//h3[text()="1. Kenneth Branagh"]');
+        $element = $crawler->filterXPath(
+            '//div[@data-testid="nlib-title"][contains(@class, "ipc-title")]/a[@class="ipc-title-link-wrapper"]/h3[text()="1. Kenneth Branagh"]'
+        );
         $element->click();
         $this->client->takeScreenshot('screenshot.jpg');
 

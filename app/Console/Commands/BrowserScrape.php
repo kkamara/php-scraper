@@ -90,7 +90,7 @@ class BrowserScrape extends Command
         $preferences->click();
         $element = $crawler->filterXPath('//h3[text()="1. Kenneth Branagh"]');
         $element->click();
-        $this->client->takeScreenshot($saveAs = 'screenshot.jpg');
+        $this->client->takeScreenshot('screenshot.jpg');
 
 
         return 0;

@@ -9,7 +9,7 @@
     ],
     "version": "2.0.0",
     "type": "project",
-    "description": "(2022) Use PHP technologies to crawl and click buttons on websites with GUI. I highly recommend working with Linux (including virtual machines) or MacOs.",
+    "description": "(2022) Use PHP technologies to crawl and click buttons on websites with GUI. I highly recommend working with Linux (including virtual machines) or MacOs. Laravel 11.",
     "keywords": [
         "bot",
         "crawler",

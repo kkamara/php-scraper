@@ -6,6 +6,8 @@
 
 * [Important note:](#note)
 
+* [Using Postman?](#postman)
+
 * [Requirements](#requirements)
 
 * [Installation](#installation)
@@ -25,6 +27,13 @@
 ## Important note: <a name="note"></a>
 
 Before you try to scrape any website, go through its robots.txt file. You can access it via `domainname/robots.txt`. There, you will see a list of pages allowed and disallowed for scraping. You should not violate any terms of service of any website you scrape.
+
+<a name="postman"></a>
+## Using Postman?
+
+[Postman client](https://www.postman.com/).
+
+[Published Postman API Collection](https://documenter.getpostman.com/view/17125932/TzzAKvVe).
 
 ## Requirements
 

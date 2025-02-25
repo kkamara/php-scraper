@@ -16,7 +16,7 @@
         "laravel",
         "spider"
     ],
-    "license": "MIT",
+    "license": "BSD-3-Clause",
     "require": {
         "php": "^8.2",
         "dbrekelmans/bdi": "^1.4",

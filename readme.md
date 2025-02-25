@@ -2,7 +2,7 @@
 
 # PhP Scraper [![API](https://github.com/kkamara/php-scraper/actions/workflows/build.yml/badge.svg)](https://github.com/kkamara/php-scraper/actions/workflows/build.yml)
 
-(2022) Use PHP technologies to crawl and click buttons on websites with GUI. I highly recommend working with Linux (including virtual machines) or MacOs. Laravel 11.
+(2022) Use PHP technologies to crawl and click buttons on websites with GUI. I highly recommend working with Linux (including virtual machines) or MacOs. Laravel 12.
 
 * [Important note:](#note)
 
@@ -87,7 +87,7 @@ yarn build
 Run the following in a new terminal.
 
 ```bash
-java -jar selenium-server-4.18.1.jar standalone --override-max-sessions true --max-sessions 10
+java -jar selenium-server-4.29.0.jar standalone --override-max-sessions true --max-sessions 10
 ```
 
 [CLI options in the Selenium Grid](https://www.selenium.dev/documentation/grid/configuration/cli_options/).
@@ -124,27 +124,11 @@ php artisan make:crawler TestCrawler
 
 [See MRVL Desktop.](https://github.com/kkamara/mrvl-desktop)
 
-[See MRVL Web.](https://github.com/kkamara/mrvl-web)
-
-[See Github to Bitbucket Backup Repo Updater.](https://github.com/kkamara/ghbbupdater)
+[See PHP ReactJS Boilerplate.](https://github.com/kkamara/php-reactjs-boilerplate)
 
 [See PHP Docker Skeleton.](https://github.com/kkamara/php-docker-skeleton)
 
-[See Laravel 10 API 3.](https://github.com/kkamara/laravel-10-api-3)
-
-[See movies app.](https://github.com/kkamara/movies)
-
-[See food nutrition facts search web app.](https://github.com/kkamara/food-nutrition-facts-search-web-app)
-
-[See ecommerce web.](https://github.com/kkamara/ecommerce-web)
-
-[See city maps mobile.](https://github.com/kkamara/city-maps-mobile)
-
-[See ecommerce mobile.](https://github.com/kkamara/ecommerce-mobile)
-
-[See crm.](https://github.com/kkamara/crm)
-
-[See birthday currency.](https://github.com/kkamara/birthday-currency)
+[See Python Docker Skeleton.](https://github.com/kkamara/python-docker-skeleton)
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.

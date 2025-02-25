@@ -30,7 +30,7 @@ class BrowserScrape extends Command
     public function __construct()
     {
         parent::__construct();
-        $capabilities = array( // See https://www.browserstack.com/docs/automate/capabilities
+        $capabilities = array(
             "os"                       => "Windows",
             "os_version"               => "11",
             "browser"                  => "Chrome",
@@ -68,15 +68,6 @@ class BrowserScrape extends Command
     }
 
     /**
-     * @return string
-     */
-    private function getInput() {
-        $words = $this->ask('>>');
-        $this->info($words);
-        return $words;
-    }
-
-    /**
      * Execute the console command.
      *
      * @return int
@@ -92,5 +83,14 @@ class BrowserScrape extends Command
         $this->client->takeScreenshot('screenshot.jpg');
 
         return 0;
+    }
+
+    /**
+     * @return string
+     */
+    private function getInput() {
+        $words = $this->ask('>>');
+        $this->info($words);
+        return $words;
     }
 }

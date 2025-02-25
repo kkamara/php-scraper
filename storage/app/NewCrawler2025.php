@@ -30,7 +30,7 @@ class NewCrawler2025 extends Command
     public function __construct()
     {
         parent::__construct();
-        $capabilities = array( // See https://www.browserstack.com/docs/automate/capabilities
+        $capabilities = array(
             "os"                       => "Windows",
             "os_version"               => "11",
             "browser"                  => "Chrome",

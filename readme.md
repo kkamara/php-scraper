@@ -2,7 +2,7 @@
 
 # PhP Scraper [![API](https://github.com/kkamara/php-scraper/actions/workflows/build.yml/badge.svg)](https://github.com/kkamara/php-scraper/actions/workflows/build.yml)
 
-(2022) Use PHP technologies to crawl and click buttons on websites with GUI. I highly recommend working with Linux (including virtual machines) or MacOs. Laravel 11.
+(2022) Use PHP technologies to crawl and click buttons on websites with GUI. I highly recommend working with Linux (including virtual machines) or MacOs. Laravel 12.
 
 * [Important note:](#note)
 

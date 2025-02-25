@@ -6,7 +6,7 @@ use Illuminate\Console\Command;
 use Symfony\Component\Panther\Client;
 use Facebook\WebDriver\Remote\DesiredCapabilities;
 
-class NewCrawler2024 extends Command
+class NewCrawler2025 extends Command
 {
     /**
      * The name and signature of the console command.
@@ -70,15 +70,6 @@ class NewCrawler2024 extends Command
     }
 
     /**
-     * @return string
-     */
-    private function getInput() {
-        $words = $this->ask('>>');
-        $this->info($words);
-        return $words;
-    }
-
-    /**
      * Execute the console command.
      *
      * @return int
@@ -94,5 +85,14 @@ class NewCrawler2024 extends Command
         $this->client->takeScreenshot('screenshot.jpg');
 
         return 0;
+    }
+
+    /**
+     * @return string
+     */
+    private function getInput() {
+        $words = $this->ask('>>');
+        $this->info($words);
+        return $words;
     }
 }

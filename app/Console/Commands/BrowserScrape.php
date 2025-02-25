@@ -68,15 +68,6 @@ class BrowserScrape extends Command
     }
 
     /**
-     * @return string
-     */
-    private function getInput() {
-        $words = $this->ask('>>');
-        $this->info($words);
-        return $words;
-    }
-
-    /**
      * Execute the console command.
      *
      * @return int
@@ -92,5 +83,14 @@ class BrowserScrape extends Command
         $this->client->takeScreenshot('screenshot.jpg');
 
         return 0;
+    }
+
+    /**
+     * @return string
+     */
+    private function getInput() {
+        $words = $this->ask('>>');
+        $this->info($words);
+        return $words;
     }
 }

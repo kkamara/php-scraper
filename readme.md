@@ -87,7 +87,7 @@ yarn build
 Run the following in a new terminal.
 
 ```bash
-java -jar selenium-server-4.18.1.jar standalone --override-max-sessions true --max-sessions 10
+java -jar selenium-server-4.29.0.jar standalone --override-max-sessions true --max-sessions 10
 ```
 
 [CLI options in the Selenium Grid](https://www.selenium.dev/documentation/grid/configuration/cli_options/).

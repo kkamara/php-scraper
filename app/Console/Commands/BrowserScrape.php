@@ -88,12 +88,8 @@ class BrowserScrape extends Command
         $crawler = $this->client->getCrawler();
         $preferences = $crawler->filterXPath('//button[@data-testid="accept-button"]');
         $preferences->click();
-        $element = $crawler->filterXPath(
-            '//div[@data-testid="nlib-title"][contains(@class, "ipc-title")]/a[@class="ipc-title-link-wrapper"]/h3[text()="1. Kenneth Branagh"]'
-        );
-        $element->click();
+        sleep(1);
         $this->client->takeScreenshot('screenshot.jpg');
-
 
         return 0;
     }

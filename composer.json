@@ -26,7 +26,7 @@
         "symfony/panther": "^2.1"
     },
     "require-dev": {
-        "fakerphp/faker": "^1.23",
+        "fakerphp/faker": "^1.24.1",
         "laravel/pint": "^1.21.0",
         "laravel/sail": "^1.41.0",
         "mockery/mockery": "^1.6.12",

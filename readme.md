@@ -37,8 +37,7 @@ Before you try to scrape any website, go through its robots.txt file. You can ac
 
 ## Requirements
 
-* [https://laravel.com/docs/12.x/installation](https://laravel.com/docs/12.x/installation)
-* [https://laravel.com/docs/12.x/vite](https://laravel.com/docs/12.x/vite)
+* [https://laravel.com/docs](https://laravel.com/docs)
 * [Java](https://www.java.com/en/)
 
 ## Installation

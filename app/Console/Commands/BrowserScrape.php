@@ -74,12 +74,20 @@ class BrowserScrape extends Command
      */
     public function handle()
     {
-        $this->client
-            ->get('https://www.imdb.com/search/name/?birth_monthday=12-10');
-        $crawler = $this->client->getCrawler();
-        $preferences = $crawler->filterXPath('//button[@data-testid="accept-button"]');
-        $preferences->click();
+        $this->client->get(
+            'https://www.imdb.com/search/name/?birth_monthday=12-10'
+        );
         sleep(1);
+        // If the website is an SPA e.g. React app, we
+        // may need to wait for the content to load,
+        // so instead of getCrawler we use
+        // refreshCrawler().
+        $crawler = $this->client->refreshCrawler();
+        $titleElement = $crawler->filterXPath(
+            "//h1[contains(@class, 'ipc-title__text')]"
+        );
+        $titleText = $titleElement->getText();
+        $this->info($titleText);
         $this->client->takeScreenshot('screenshot.jpg');
 
         return 0;

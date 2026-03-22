@@ -26,7 +26,7 @@ class MakeCrawler extends Command
 
     protected $template = null;
 
-    protected $templateName = 'NewCrawler2025';
+    protected $templateName = 'NewCrawler2026';
 
     public function __construct()
     {

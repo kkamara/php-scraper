@@ -18,8 +18,6 @@
 
 * [Browser Testing](#testing)
 
-* [Misc](#misc)
-
 * [Contributing](#contributing)
 
 * [License](#license)
@@ -115,19 +113,7 @@ php artisan browser:scrape
 
 ```bash
 php artisan make:crawler TestCrawler
-```
-
-## Misc
-
-[See Python Selenium web scraper.](https://github.com/kkamara/python-selenium)
-
-[See MRVL Desktop.](https://github.com/kkamara/mrvl-desktop)
-
-[See PHP ReactJS Boilerplate.](https://github.com/kkamara/php-reactjs-boilerplate)
-
-[See PHP Docker Skeleton.](https://github.com/kkamara/php-docker-skeleton)
-
-[See Python Docker Skeleton.](https://github.com/kkamara/python-docker-skeleton)
+``
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.

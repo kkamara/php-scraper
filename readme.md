@@ -1,4 +1,4 @@
-<img src="https://github.com/kkamara/useful/raw/main/php-scraper.gif" alt="php-scraper.gif" width=""/>
+<img src="https://github.com/kkamara/useful/raw/main/nodejs-scraper.gif" alt="nodejs-scraper.gif" width=""/>
 
 # PHP Scraper [![API](https://github.com/kkamara/php-scraper/actions/workflows/build.yml/badge.svg)](https://github.com/kkamara/php-scraper/actions/workflows/build.yml)
 
